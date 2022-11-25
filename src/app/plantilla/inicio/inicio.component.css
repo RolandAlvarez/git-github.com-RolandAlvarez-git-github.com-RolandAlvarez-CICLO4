@@ -1,0 +1,90 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .card {
+    width: 750px;                 /* Set width of cards */
+    display: block;                /* Children use Flexbox */
+    flex-direction: column;       /* Rotate Axis */
+    border: 10px solid #e1ebeb;    /* Set up Border */
+    border-radius: 8px;           /* Slightly Curve edges */
+    overflow: hidden;             /* Fixes the corners */
+    margin: 10px;                  /* Add space between cards */
+    float: center
+  }
+  
+  .card-header {
+    color: #e1ebeb;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 1200;
+    border-bottom: 11px solid #e1ebeb;
+    background-color: hsl(290, 56%, 63%);
+    padding: 10px 20px;
+  }
+  
+  .card-main {
+    display: flex;              /* Children use Flexbox */
+    flex-direction: column;     /* Rotate Axis to Vertical */
+    justify-content: center;    /* Group Children in Center */
+    align-items: center;        /* Group Children in Center (on cross axis) */
+    padding: 115px 0;            /* Add padding to the top/bottom */
+  }
+  
+  .material-icons {
+    font-size: 72px;
+    color: #8f8484;
+    margin-bottom: 10px;
+  }
+  
+  .main-description {
+    color: #a86221;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .card {
+    width: 750px;                 /* Set width of cards */
+    display: block;                /* Children use Flexbox */
+    flex-direction: column;       /* Rotate Axis */
+    border: 10px solid #e1ebeb;    /* Set up Border */
+    border-radius: 8px;           /* Slightly Curve edges */
+    overflow: hidden;             /* Fixes the corners */
+    margin: 10px;                  /* Add space between cards */
+    float: left
+  }
+  
+  .card-header {
+    color: #e1ebeb;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 1200;
+    border-bottom: 2px solid #e1ebeb;
+    background-color:  hsl(290, 56%, 63%);
+    padding: 10px 20px;
+  }
+  
+  .card-main {
+    display: flex;              /* Children use Flexbox */
+    flex-direction: column;     /* Rotate Axis to Vertical */
+    justify-content: center;    /* Group Children in Center */
+    align-items: center;        /* Group Children in Center (on cross axis) */
+    padding: 30px 0;            /* Add padding to the top/bottom */
+  }
+  
+  .material-icons {
+    font-size: 72px;
+    color: #8f8484;
+    margin-bottom: 10px;
+  }
+  
+  .main-description {
+    color: #a86221;
+    font-size: 24px;
+    text-align: center;
+  }
+

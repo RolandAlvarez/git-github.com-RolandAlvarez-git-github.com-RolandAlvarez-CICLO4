@@ -1,1 +1,16 @@
-<p>identificacion works!</p>
+     <form [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()" style= "font-size:10pt; color:rgb(229, 231, 240); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; background-image: url('https://i.pinimg.com/564x/33/c2/9b/33c29bfd302fb08c4dd7c23dce09a802.jpg');">
+        <h1 >Bienvenido</h1>
+        <br>
+        <br>
+        <input formControlName ="usuario" type="email" name="email" class="login-input" placeholder="E-mail" autofocus style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;">
+        <br>
+        <br>
+        <input formControlName="contrasena" type="password" name="password" class="login-input" placeholder="Contraseña" style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;">
+        <br>
+        <br>
+        <input [disabled]="!fgValidador.valid" type="submit" value="Ingresar" class="login-submit">  
+        <br>
+        <br>        
+     </form>
+
+

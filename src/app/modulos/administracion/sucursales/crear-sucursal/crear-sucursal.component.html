@@ -1,1 +1,39 @@
-<p>crear-sucursal works!</p>
+<div class="container">        
+    <form style= "font-size:10pt; color:rgb(229, 231, 240); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; background-image: url('https://i.pinimg.com/564x/33/c2/9b/33c29bfd302fb08c4dd7c23dce09a802.jpg');" [formGroup]="fgValidador" (ngSubmit)="CrearSucursal()" class="row g-3 needs-validation" novalidate>          
+        <div class="col-md-4">
+          <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="departamento" class="form-label">Departamento</label>
+          <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="departamento" type="text" class="form-control" id="departamento" required>
+          <div class="invalid-feedback">
+            Este campo es requerido
+          </div>
+          <br>          
+          <br>                                           
+        <div class="col-md-12">
+            <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="ciudad" class="form-label">Ciudad</label>
+            <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="ciudad" type="text" class="form-control" id="ciudad" required>
+            <div class="invalid-feedback">
+                Este campo es requerido
+            </div>  
+        </div>
+        <div class="col-md-12">
+            <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="direccion" class="form-label">Dirección</label>
+            <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;"formControlName="direccion" type="text" class="form-control" id="direccion" required>
+            <div class="invalid-feedback">
+                Este campo es requerido
+            </div>  
+        </div>
+        <div class="col-md-12">
+            <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="telefono" class="form-label">Teléfono</label>
+            <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="telefono" type="text" class="form-control" id="telefono" required>
+            <div class="invalid-feedback">
+                Este campo es requerido
+            </div>  
+        </div>
+            
+    <br>
+    <br>                
+        <div class="col-12">
+          <button [disabled]="!fgValidador.valid" class="btn btn-primary" type="submit">Registra tu sucursal</button>
+        </div>   
+      
+

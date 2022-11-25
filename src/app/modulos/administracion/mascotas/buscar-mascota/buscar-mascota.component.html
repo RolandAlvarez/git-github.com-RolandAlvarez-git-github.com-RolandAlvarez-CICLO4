@@ -1,1 +1,49 @@
-<p>buscar-mascota works!</p>
+<a routerLink="/administracion/crear-mascota" class="btn">Nueva mascota</a>
+<table class="table responsive" style= "font-size:10pt; color:rgb(229, 231, 240); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; background-image: url('https://i.pinimg.com/564x/33/c2/9b/33c29bfd302fb08c4dd7c23dce09a802.jpg');">
+<thead>
+    <tr>
+    <th>
+        Nombre
+    </th>
+    <th>
+        Especie
+    </th>
+    <th>
+        Foto
+    </th>
+    <th>
+        Estado
+    </th>
+    <th>
+        Comentario
+    </th>
+    <th>
+        Editar
+    </th>
+</tr>
+
+    </thead>
+<tbody>
+    <tr *ngFor="let p of listadoRegistros">
+        <td>
+            {{p.nombre}}
+        </td>
+        <td>
+            {{p.especie}}
+        </td>
+        <td>
+            <img src= "{{p.foto}}" class="imagenMascota"/>
+        </td>
+        <td>
+            {{p.estado}}
+        </td>
+        <td>
+            {{p.comentario}}
+        </td>
+        <td>
+            <a routerLink="/administracion/editar-mascota/{{p.id}}" class="btn">Editar mascota</a>
+            <a routerLink="/administracion/eliminar-mascota/{{p.id}}" class="btn">Ver mascota</a>
+        </td>
+    </tr>
+</tbody>
+</table>

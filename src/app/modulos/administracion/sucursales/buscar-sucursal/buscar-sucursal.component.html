@@ -1,1 +1,38 @@
-<p>buscar-sucursal works!</p>
+<a routerLink="/administracion/crear-sucursal" class="btn">Nueva sucursal</a>
+<table class="table responsive" style= "font-size:10pt; color:rgb(229, 231, 240); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; background-image: url('https://i.pinimg.com/564x/33/c2/9b/33c29bfd302fb08c4dd7c23dce09a802.jpg');">
+<thead>
+    <tr>
+    <th>    
+        Departamento
+    </th>
+    <th>
+        Ciudad
+    </th>
+    <th>
+        Dirección
+    </th>
+    <th>
+        Teléfono
+    </th>    
+    </tr>     
+    </thead>
+<tbody>
+    <tr *ngFor="let p of listadoRegistros">
+        <td>
+            {{p.departamento}}
+        </td>        
+        <td>
+            {{p.ciudad}}
+        </td>
+        <td>
+            {{p.direccion}}
+        </td>
+        <td>
+            {{p.telefono}}
+        </td>
+        <td>
+            <a routerLink="/administracion/editar-sucursal/{{p.id}}" class="btn">Editar sucursal</a>
+        </td>
+    </tr>
+</tbody>
+</table>

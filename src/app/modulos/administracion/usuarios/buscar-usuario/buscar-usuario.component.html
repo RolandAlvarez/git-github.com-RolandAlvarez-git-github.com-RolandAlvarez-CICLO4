@@ -1,1 +1,51 @@
-<p>buscar-usuario works!</p>
+<a routerLink="/administracion/crear-usuario" class="btn">Nuevo usuario</a>
+<table class="table responsive" style= "font-size:10pt; color:rgb(229, 231, 240); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; background-image: url('https://i.pinimg.com/564x/33/c2/9b/33c29bfd302fb08c4dd7c23dce09a802.jpg');">
+<thead>
+    <tr>
+    <th>
+        Nombre
+    </th>
+    <th>
+        Apellido
+    </th>
+    <th>
+        Cedula
+    </th>
+    <th>
+        Telefono
+    </th>
+    <th>
+        Correo
+    </th>
+    <th>
+        Rol
+    </th>
+    </thead>
+<tbody>
+    <tr *ngFor="let p of listadoRegistros">
+        <td>
+            {{p.nombre}}
+        </td>
+        <td>
+            {{p.apellido}}
+        </td>
+        <td>
+            {{p.cedula}}
+        </td>
+        <td>
+            {{p.telefono}}
+        </td>
+        <td>
+            {{p.correo}}
+        </td>
+        <td>
+            {{p.rol}}
+        </td>
+        <td>
+            <a routerLink="/administracion/editar-usuario/{{p.id}}" class="btn">Editar usuario</a>
+            <a routerLink="/administracion/eliminar-usuario/{{p.id}}" class="btn">Ver perfil</a>
+        </td>
+    </tr>
+</tbody>
+</table>
+

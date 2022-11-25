@@ -1,1 +1,43 @@
-<p>editar-usuario works!</p>
+<div class="container">        
+    <form style= "font-size:10pt; color:rgb(229, 231, 240); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; background-image: url('https://i.pinimg.com/564x/33/c2/9b/33c29bfd302fb08c4dd7c23dce09a802.jpg');" [formGroup]="fgValidador"(ngSubmit)="EditarUsuario()" class="row g-3 needs-validation" novalidate>          
+        <div class="col-md-4">
+          <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="nombre" class="form-label">Nombre</label>
+          <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="nombre" type="text" class="form-control" id="nombre" required>
+          <div class="invalid-feedback">
+            
+          </div>
+        <div class="col-md-4">
+            <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="apellido" class="form-label">Apellido</label>
+            <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="apellido" type="text" class="form-control" id="apellido" required>
+            <div class="invalid-feedback">
+         
+        </div>
+        <div class="col-md-4">
+            <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="cedula" class="form-label">Cédula</label>
+            <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="cedula" type="text" class="form-control" id="cedula" required>
+            <div class="invalid-feedback">
+            
+        </div>
+        <div class="col-md-4">
+            <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="telefono" class="form-label">Teléfono</label>
+            <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="telefono" type="text" class="form-control" id="telefono" required>
+            <div class="invalid-feedback">
+             
+        </div>
+        <div class="col-md-4">
+            <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="correo" class="form-label">Correo</label>
+            <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="correo" type="text" class="form-control" id="correo" required>
+            <div class="invalid-feedback">
+             
+        </div>
+          <br>    
+          <br>
+        <br>                       
+        
+              
+        <div class="col-12">
+          <button [disabled]="!fgValidador.valid" class="btn btn-primary" type="submit">Edita tu usuario</button>
+        </div>   
+      
+
+

@@ -18,9 +18,9 @@ import { EditarSucursalComponent } from './sucursales/editar-sucursal/editar-suc
 import { EliminarSucursalComponent } from './sucursales/eliminar-sucursal/eliminar-sucursal.component';
 import { BuscarSucursalComponent } from './sucursales/buscar-sucursal/buscar-sucursal.component';
 import { ProductosServiciosComponent } from './productos-servicios/productos-servicios.component';
-import { CrearProductosServiciosComponent } from './productos-servicios/crear-productos-servicios/crear-productos-servicios.component';
-import { EditarProductosServiciosComponent } from './productos-servicios/editar-productos-servicios/editar-productos-servicios.component';
-import { BuscarProductosServiciosComponent } from './productos-servicios/buscar-productos-servicios/buscar-productos-servicios.component';
+import { CrearProductoServicioComponent,} from './productos-servicios/crear-productos-servicios/crear-productos-servicios.component';
+import { EditarProductoServicioComponent } from './productos-servicios/editar-productos-servicios/editar-productos-servicios.component';
+import { BuscarProductoServicioComponent } from './productos-servicios/buscar-productos-servicios/buscar-productos-servicios.component';
 import { EliminarProductosServiciosComponent } from './productos-servicios/eliminar-productos-servicios/eliminar-productos-servicios.component';
 import { MascotasComponent } from './mascotas/mascotas.component';
 import { CrearMascotaComponent } from './mascotas/crear-mascota/crear-mascota.component';
@@ -31,6 +31,7 @@ import { ProspectosComponent } from './prospectos/prospectos.component';
 import { AprobarProspectoComponent } from './prospectos/aprobar-prospecto/aprobar-prospecto.component';
 import { RechazarProspectoComponent } from './prospectos/rechazar-prospecto/rechazar-prospecto.component';
 import { VerProspectoComponent } from './prospectos/ver-prospecto/ver-prospecto.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -51,9 +52,9 @@ import { VerProspectoComponent } from './prospectos/ver-prospecto/ver-prospecto.
     EliminarSucursalComponent,
     BuscarSucursalComponent,
     ProductosServiciosComponent,
-    CrearProductosServiciosComponent,
-    EditarProductosServiciosComponent,
-    BuscarProductosServiciosComponent,
+    CrearProductoServicioComponent,
+    EditarProductoServicioComponent,
+    BuscarProductoServicioComponent,
     EliminarProductosServiciosComponent,
     MascotasComponent,
     CrearMascotaComponent,
@@ -67,7 +68,9 @@ import { VerProspectoComponent } from './prospectos/ver-prospecto/ver-prospecto.
   ],
   imports: [
     CommonModule,
-    AdministracionRoutingModule
+    AdministracionRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministracionModule { }

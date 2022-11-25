@@ -1,19 +1,26 @@
 <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+    <div class="nav-wrapper" style="background-image: url('https://i.pinimg.com/564x/91/5c/93/915c930eacf4527c425edaa62795656e.jpg'); font-family: Cursive, Lucida, Lucida; font-size: 5px;">
+      <a><img src="https://cdn-icons-png.flaticon.com/512/1067/1067844.png" width="60" height="60"></a> <a routerLink="/" class="brand-logo">Tu Mascota Feliz</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">Home</i></a>
+      <ul class="right hide-on-med-and-down">        
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-usuarios">Usuarios</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-mascotas">Mascotas</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-sucursales">Nuestras sucursales</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-plan">Planes</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="/inicio">Home</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="/administracion/aprobar-prospecto">Regístrate</a></li>
+        <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar sesión</a></li>
+        <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Inicia sesión</a></li>
       </ul>
     </div>
   </nav>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
+  <ul class="sidenav" id="mobile-demo" style="background-image: url('https://i.pinimg.com/564x/91/5c/93/915c930eacf4527c425edaa62795656e.jpg'); font-family: Cursive, Lucida, Lucida; font-size: 5px;">
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-usuarios">Usuarios</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-mascotas">Mascotas</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/listar-sucursales">Nuestras sucursales</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/administracion/buscar-plan">Planes</a></li>
+    <li *ngIf="!seInicioSesion"><a routerLink="/administracion/aprobar-prospecto">Regístrate</a></li>
+    <li *ngIf="seInicioSesion"><a routerLink="/seguridad/cerrarSesion">Cerrar sesión</a></li>
+    <li *ngIf="!seInicioSesion"><a routerLink="/seguridad/identificar">Inicia sesión</a></li>
   </ul>

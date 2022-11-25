@@ -1,1 +1,52 @@
-<p>crear-mascota works!</p>
+
+<div class="container">        
+    <form style= "font-size:10pt; color:rgb(229, 231, 240); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; background-image: url('https://i.pinimg.com/564x/33/c2/9b/33c29bfd302fb08c4dd7c23dce09a802.jpg');" [formGroup]="fgValidador" (ngSubmit)="CrearMascota()" class="row g-3 needs-validation" novalidate>          
+        <div class="col-md-4">
+          <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="nombre" class="form-label">Nombre</label>
+          <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="nombre" type="text" class="form-control" id="nombre" required>
+          <div class="invalid-feedback">
+            Este campo es requerido
+          </div>
+          <br>          
+      <div class="col-md-12">     
+      <select style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="especie" class="browser-default">
+      <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="especie" class="form-label">Especie</label>
+      <option selected disabled value="">Especie...</option>
+      <option>Canino</option> 
+      <option>Felino</option>     
+    </select>
+    <div class="invalid-feedback">
+      Por favor selecciona
+    </div>
+    </div>        
+        <br>
+        <br>                       
+        <div class="input-field">
+            <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for ="foto"> Foto </label>
+            <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="foto" type="text" name="foto" required>
+        </div>
+        <br>                                           
+        <div class="col-md-12">
+            <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="comentario" class="form-label">Comentario</label>
+            <input style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="comentario" type="text" class="form-control" id="comentario" required>
+            <div class="invalid-feedback">
+              Ingresa tu comentario
+            </div>  
+        </div>
+        <br> 
+    <div class="col-md-12">     
+      <select style= "font-size:10pt; color:rgb(8, 8, 8)rsive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" formControlName="estado" class="browser-default">
+      <label style= "font-size:10pt; color:rgb(255, 255, 255); font-family: Cursive, Lucida, Lucida; align-items: center; justify-content: center; text-align: center; font-size: 20px;" for="estado" class="form-label">Estado</label>
+      <option selected disabled value="">Estado...</option>
+      <option >Pendiente</option>      
+    </select>
+    <div class="invalid-feedback">
+      Por favor selecciona
+    </div>
+    </div>        
+    <br>
+    <br>                
+        <div class="col-12">
+          <button [disabled]="!fgValidador.valid" class="btn btn-primary" type="submit">Registra tu mascota</button>
+        </div>   
+      
